@@ -6,5 +6,10 @@ class CalculationsController < ApplicationController
 
   def create
   end
+
+  private
+  def calculation_params
+    params.permit(:weight, :height)
+  end
   
 end
