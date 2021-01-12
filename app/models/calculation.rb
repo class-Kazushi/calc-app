@@ -5,4 +5,7 @@ class Calculation < ApplicationRecord
     validates :height
   end
   
+  def bmi_result
+    weight / (height ** 2)
+  end
 end
