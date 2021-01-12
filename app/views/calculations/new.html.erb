@@ -1,2 +1,23 @@
 <h1>BMI計算</h1>
 
+<div class="form-group calc-form">
+  <%= form_with model: @calculation, local: true do |f| %>
+
+    <div class="calc-input">
+      <div class="calc-weight">
+        <%= f.label :"体重(kg)" %><br />
+        <%= f.text_field :weight, autofocus: true, autocomplete: "weight", class: "form-control  weight-form" %>
+      </div>
+
+      <div class="calc-height">
+        <%= f.label :"身長(m)" %><br />
+        <%= f.text_field :height, autofocus: true, autocomplete: "weight", class: "form-control  height-form" %>
+      </div>
+
+      <div class="request-submit">
+        <%= f.submit "計算する", class: "btn btn-primary calc-button" %>
+      </div>
+
+    </div>
+  <% end %>
+</div>
