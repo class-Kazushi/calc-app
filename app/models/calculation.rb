@@ -6,6 +6,6 @@ class Calculation < ApplicationRecord
   end
   
   def bmi_result
-    weight / (height ** 2)
+    weight / (height.to_f ** 2)
   end
 end
