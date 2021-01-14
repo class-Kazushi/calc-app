@@ -1,3 +1,8 @@
 <h1>計算結果</h1>
 
+<div class="calc-result">
 あなたのBMIは<b><%= @calculation.bmi_result.round(2) %></b>です。
+</div><br />
+
+<div class="return-calc">
+<%= link_to 'もう一度計る', root_path, class: "new_link" %>
